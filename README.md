@@ -22,8 +22,7 @@ Based on apache thrift 0.9.3
 Patch (https://github.com/hbs/Thrift-GWT)
 
 ## <a name="contribute"></a>contribute
-== to contribute
-https://thrift.apache.org/docs/HowToContribute
+To contribute to thrift > (https://thrift.apache.org/docs/HowToContribute)
 
 
 
