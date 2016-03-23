@@ -56,6 +56,31 @@ To make project take a look to (https://thrift.apache.org/docs/install/)
 ## <a name="jars"></a>jars
     - libthrift-0.9.3-Gwt.jar
     - gwt-module-thrift-0.9.3.jar used for (<inherits name='GWT' />)
+
+To generate jar after install ou have to execute ant file:
+
+    https://github.com/naddame/ThriftGwt/blob/master/thrift-lib/java/build.xml
+
+Execute the target dist to generate libthrift-0.9.3-Gwt.jar
+
+Execute the target thrift-gwtmodule to generate gwt-module-thrift-0.9.3.jar
+
+Not in the file build.xml installation of the jar to the local maven repository, Modify the value of mvn.dir to your local maven installation
+
+    <!-- Package module file and GWT version of generated files into a dummy module -->
+    <jar basedir="${src}" destfile="${build.dir}/GWT.1.0.jar" includes="GWT.gwt.xml **/gwt/*.java" />
+    <property name="mvn.dir" value="C:\apache-maven-3.1.1\bin\mvn.bat"/>
+    <exec dir="${basedir}/" executable="cmd">
+        <arg value="/c"/>
+        <arg value="${mvn.dir}"/>
+        <arg line="install:install-file -Dfile=${build.dir}/GWT.1.0.jar -DgroupId=apache-thrift-gwt -DartifactId=gwt-module-thrift -Dversion=0.9.3 -Dpackaging=jar"/>
+    </exec>
+
+you can also intall jars to the local maven repository with command line:
+
+    mvn install:install-file -Dfile=${build.dir}/GWT.1.0.jar -DgroupId=apache-thrift-gwt -DartifactId=gwt-module-thrift -Dversion=0.9.3 -Dpackaging=jar
+
+
 ## <a name="exe"></a>exe
     - thrift-0.9.3.exe
 
