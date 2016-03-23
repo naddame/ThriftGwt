@@ -30,11 +30,14 @@ To contribute to thrift > (https://thrift.apache.org/docs/HowToContribute)
     thrift-0.9.3-gwt.patch
 
 Generate by the command:
+
     git diff > thrift-0.9.3-gwt.patch
 
 Clone the project:
+
     git clone https://git-wip-us.apache.org/repos/asf/thrift.git thrift
     git checkout tags/0.9.3
+
 Take a look at what changes are in the patch: this only shows you the stats about what it’ll do:
 
     $ git apply --stat thrift-0.9.3-gwt.patch
