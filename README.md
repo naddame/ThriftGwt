@@ -1,7 +1,9 @@
 # Table of Content
 * [Contributors](#contributors)
 * [Application Architecture](#application-architecture)
+* [contribute](#contribute)
 * [patch](#patch)
+* [install](#install)
 * [jars](#jars)
 * [exe](#exe)
 * [thrift-lib](#thrift-lib)
@@ -19,9 +21,19 @@ Based on apache thrift 0.9.3
 (https://github.com/apache/thrift)
 Patch (https://github.com/hbs/Thrift-GWT)
 
+## <a name="contribute"></a>contribute
+== to contribute
+https://thrift.apache.org/docs/HowToContribute
+
+
+
 ## <a name="patch"></a>patch
     thrift-0.9.3-gwt.patch
-First, take a look at what changes are in the patch: this only shows you the stats about what it’ll do:
+
+Clone the project:
+    git clone https://git-wip-us.apache.org/repos/asf/thrift.git thrift
+
+Take a look at what changes are in the patch: this only shows you the stats about what it’ll do:
 
     $ git apply --stat thrift-0.9.3-gwt.patch
 
@@ -33,7 +45,8 @@ Apply:
 
     $ git am --signoff < thrift-0.9.3-gwt.patch
 
-
+## <a name="install"></a>install
+To make project take a look to (https://thrift.apache.org/docs/install/)
 
 ## <a name="jars"></a>jars
     - libthrift-0.9.3-Gwt.jar
