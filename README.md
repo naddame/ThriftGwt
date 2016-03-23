@@ -21,13 +21,16 @@ Patch (https://github.com/hbs/Thrift-GWT)
 
 ## <a name="patch"></a>patch
     thrift-0.9.3-gwt.patch
-First, take a look at what changes are in the patch: this only shows you the stats about what it’ll do.
+First, take a look at what changes are in the patch: this only shows you the stats about what it’ll do:
+
     $ git apply --stat thrift-0.9.3-gwt.patch
 
-You can test the patch before you actually apply it.
+You can test the patch before you actually apply it:
+
     $ git apply --check thrift-0.9.3-gwt.patch
 
-Apply
+Apply:
+
     $ git am --signoff < thrift-0.9.3-gwt.patch
 
 
